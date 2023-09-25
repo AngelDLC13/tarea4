@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operaciones Matemáticas</title>
+    <link rel="stylesheet" type="text/css" href="tt1.css">
+</head>
+<body>
+    <h1>Operaciones Matemáticas</h1>
+    
+    <div>
+        <label for="numero1">Número 1:</label>
+        <input type="text" id="numero1">
+    </div>
+    
+    <div>
+        <label for="numero2">Número 2:</label>
+        <input type="text" id="numero2">
+    </div>
+    
+    <button onclick="realizarOperaciones()">Realizar Operaciones</button>
+    <button onclick="restablecerCampos()">Restablecer Campos</button>
+    
+    <div id="resultado">
+        Resultado:
+    </div>
+
+    <script>
+        function realizarOperaciones() {
+            var numero1 = parseFloat(document.getElementById("numero1").value);
+            var numero2 = parseFloat(document.getElementById("numero2").value);
+            var resultado = document.getElementById("resultado");
+
+            resultado.innerHTML = "";
+
+            resultado.innerHTML += `Primera iteración - Suma: ${numero1 + numero2}<br>`;
+            resultado.innerHTML += `Segunda iteración - Resta: ${numero1 - numero2}<br>`;
+            resultado.innerHTML += `Tercera iteración - Multiplicación: ${numero1 * numero2}<br>`;
+            resultado.innerHTML += `Cuarta iteración - División: ${numero1 / numero2}<br>`;
+            resultado.innerHTML += `Quinta iteración - Módulo: ${numero1 % numero2}<br>`;
+        }
+        function restablecerCampos() {
+            document.getElementById("numero1").value = "";
+            document.getElementById("numero2").value = "";
+        }
+    </script>
+</body>
+</html>
